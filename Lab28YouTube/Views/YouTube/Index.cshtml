@@ -1,0 +1,16 @@
+﻿@model Lab28YouTube.Models.YouTubeModel
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm())
+{
+    <br /><br />
+    <div>Find your Youtube video</div>
+    <div>
+      @Html.TextBoxFor(model => model.Keywords)
+        <button type="submit">Submit</button>
+
+        </div>
+    <br />
+
+}

@@ -1,0 +1,41 @@
+﻿@model Lab28YouTube.Models.YouTubeModel
+
+@{
+    ViewBag.Title = "Search Results";
+}
+
+<h2>Search Results for Keywords: @Model.Keywords</h2>
+
+<h3>Videos</h3>
+<ul>
+    @foreach (var text in Model.Videos)
+    {
+        <li>@text</li>
+    }
+</ul>
+
+<h3>Channels</h3>
+<ul>
+    @foreach (var text in Model.Channels)
+    {
+        <li>@text</li>
+    }
+</ul>
+
+<h3>Playlists</h3>
+<ul>
+    @foreach (var text in Model.Playlists)
+    {
+        <li>@text</li>
+    }
+</ul>
+<br /><br />
+<div>Would you like to see your video? <br/>
+    Copy the text in the parentheses, <br />
+    <a href="http://www.youtube.com/" target="_blank">click here to go to YouTube</a> and paste your text in the search!
+</div>
+
+
+<div>
+    Would you like to Go Again? @Html.ActionLink("Search Again", "Index", "YouTube")
+</div>
